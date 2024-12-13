@@ -31,11 +31,11 @@ public class BallMetricsService : IBallMetricsService
 
     public async Task<int> AddAsync(BallMetricsDTO dto)
     {
-        var metric = _mapper.Map<BallMetrics>(dto);
+        var metric = _mapper.Map<BallMetric>(dto);
         await _unitOfWork.BallMetricsRepository.AddAsync(metric);
         await _unitOfWork.SaveChangesAsync();
         
-        return metric.Id;
+        return metric.MetricId;
     }
     
     public async Task<PlayerMetricsInputDTO?> GetPlayerWithMetricsAsync(int id)

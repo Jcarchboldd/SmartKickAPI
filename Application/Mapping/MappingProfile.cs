@@ -8,7 +8,7 @@ public class MappingProfile : Profile
 {
     public MappingProfile()
     {
-        CreateMap<BallMetrics, BallMetricsDTO>().ReverseMap();
+        CreateMap<BallMetric, BallMetricsDTO>().ReverseMap();
         
         CreateMap<PlayerMetricsInput, PlayerMetricsInputDTO>().ReverseMap();
     }

@@ -4,7 +4,7 @@ namespace Domain.Interfaces;
 
 public interface IBallMetricsRepository
 {
-    Task<IEnumerable<BallMetrics?>> GetAllAsync();
-    Task<BallMetrics?> GetByIdAsync(int id);
-    Task AddAsync(BallMetrics ballMetrics);
+    Task<IEnumerable<BallMetric?>> GetAllAsync();
+    Task<BallMetric?> GetByIdAsync(int id);
+    Task AddAsync(BallMetric ballMetric);
 }

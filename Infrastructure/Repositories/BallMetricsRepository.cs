@@ -14,19 +14,19 @@ public class BallMetricsRepository : IBallMetricsRepository
         _context = context;
     }
     
-    public async Task<IEnumerable<BallMetrics?>> GetAllAsync()
+    public async Task<IEnumerable<BallMetric?>> GetAllAsync()
     {
         return await _context.BallMetrics.ToListAsync();
     }
 
-    public async Task<BallMetrics?> GetByIdAsync(int id)
+    public async Task<BallMetric?> GetByIdAsync(int id)
     {
         return await _context.BallMetrics.FindAsync(id);
     }
 
-    public async Task AddAsync(BallMetrics ballMetrics)
+    public async Task AddAsync(BallMetric ballMetric)
     {
-        ballMetrics.Timestamp = DateTime.Now;
-        await _context.BallMetrics.AddAsync(ballMetrics);
+        ballMetric.Timestamp = DateTime.Now;
+        await _context.BallMetrics.AddAsync(ballMetric);
     }
 }

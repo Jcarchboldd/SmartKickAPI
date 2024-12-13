@@ -1,15 +1,18 @@
 namespace Domain.Entities;
 
-public class BallMetrics
+public class BallMetric
 {
-    public int Id { get; set; }
-    public string BallId { get; set; } = string.Empty;
+    public int MetricId { get; set; }
     public string SessionId { get; set; } = string.Empty;
     public DateTime Timestamp { get; set; }
-    public float Speed { get; set; }
+    public int KickCount { get; set; }
+    public float AverageHeight { get; set; }
+    public float MaxHeight { get; set; }
+    public float MinHeight { get; set; }
+    public float TimeBetweenKicks { get; set; }
+    public float KickAccuracy { get; set; }
     public float Spin { get; set; }
-    public float Height { get; set; }
-
-    public int PlayerId { get; set; }
-    public Player Player { get; set; }
+    public float KickForce { get; set; }
+    
+    public Session Session { get; set; } = null!;
 }
