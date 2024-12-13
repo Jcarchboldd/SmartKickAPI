@@ -43,7 +43,7 @@ using (var serviceScope = app.Services.CreateScope())
 {
     var dbContext = serviceScope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
     dbContext.Database.Migrate();
-    dbContext.SeedData();
+    // dbContext.SeedData();
 }
 
 if (app.Environment.IsDevelopment())
